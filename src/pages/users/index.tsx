@@ -145,7 +145,7 @@ export default function Users() {
             {/* Table - Body */}
             <Tbody>
               {data?.map((user) => (
-                <Tr>
+                <Tr key={user.id}>
                   {/* Table-Body - name & email (USER) */}
                   <Td>
                     <Box>
