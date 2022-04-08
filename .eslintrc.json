@@ -1,0 +1,97 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // Arrumando erro de fazer duas consultas ternárias uma dentro da outra
+    "no-nested-ternary": "off",
+    // Arrumando erro da tipagem opcional sem um valor inicial ex: name?: string -> defaultValue name="João"
+    "react/require-default-props": "off",
+    // Arrumando erro de definição de componente como função
+    "react/function-component-definition": "off",
+    // Arrumando erro de valor retornado para a promessa nao pode ser lido
+    "no-promise-executor-return": "off",
+    // Arrumando erro de import no/unresolved ex: import { Logo } from '../Logo'
+    "import/no-unresolved": "off",
+    // Antes de um return em uma função deixa uma linha em branco
+    "newline-before-return": "error",
+    // Pode fazer um export sem a necessidade de export default
+    "import/prefer-default-export": "off",
+    // Arrumando erro de chamar componente <Component {...PageProps} />
+    "react/jsx-props-no-spreading": "off",
+    // Arrumando erro de ser necessário realizar 'import React' nos arquivos
+    "react/react-in-jsx-scope": "off",
+    // Arrumando erro de falta de import extension
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "": "never"
+      }
+    ],
+    // Permitindo sintaxe jsx em arquivos js (para o projeto next.js)
+    // deve adicionar ".js" nas extensions se o projeto javascript
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    // Tirando virgula final
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    // Tirar ponto e virgula do final das declarações
+    "semi": [
+      "error",
+      "never"
+    ],
+    // Estabelecendo Aspas simples no projeto
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ],
+    // Ident com o <space> e adaptando a react
+    "indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent": [
+      "error",
+      2,
+      {
+        "checkAttributes": true,
+        "indentLogicalExpressions": true
+      }
+    ]
+  }
+}

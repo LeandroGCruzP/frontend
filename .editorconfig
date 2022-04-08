@@ -1,0 +1,9 @@
+root = true
+
+[*]
+end_of_line = lf # Estilo utilizado pelo sistema UNIX
+indent_style = space # Identação do código
+indent_size = 2 # Tamanho de identação
+charset = utf-8 # Aceita caracteres especiais do PT e ES
+trim_trailing_whitespace = true # Tira espaços em branco a final das linhas
+insert_final_newline = true # Adiciona uma linha em branco abaixo do do
